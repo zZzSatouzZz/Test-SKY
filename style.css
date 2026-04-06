@@ -194,87 +194,61 @@ body {
 
 /* Responsive mobile */
 @media (max-width: 430px) {
-  .nav ul {
-    display: none; /* ẩn menu ngang */
-  }
-  body {
-    max-width: 430px;
-    margin: 0 auto;
-  }
-
   .header {
     max-width: 430px;
     padding: 0 15px;
     height: 60px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  /* Logo ra giữa */
   .logo {
     flex: 1;
     display: flex;
-    justify-content: center; /* logo ra giữa */
-  }
-
-  .nav ul {
-    display: none; /* ẩn menu ngang */
-  }
-
-  .hamburger {
-    display: block; /* hiện hamburger trên mobile */
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 0 10px;
-  }
-
-  .hero-left, .hero-right {
-    width: 100%;
-    max-width: 430px;
-    height: auto;
-    position: relative;
-  }
-
-  .hero-left img,
-  .hero-right img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .hero-text {
-    bottom: 20px;
-    left: 15px;
-    right: 15px;
-    text-align: center;
-  }
-
-  .hero-text h2 {
-    font-size: 22px;
-    line-height: 120%;
-  }
-
-  .btn {
-    width: 140px;
-    height: 40px;
-    font-size: 12px;
-    border-radius: 20px;
-    margin: 0 auto;
-  }
-
-  .promo-bar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 10px;
     justify-content: center;
   }
 
-  .footer {
+  /* Hamburger nằm bên trái */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-right: auto; /* đẩy về bên trái */
+  }
+  .hamburger span {
+    width: 24px;
+    height: 3px;
+    background: #111;
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+
+  /* Icons gom về bên phải */
+  .icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+  }
+
+  /* Hero stack dọc */
+  .hero {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .hero-text {
+    text-align: center;
+    bottom: 20px;
+  }
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  /* Promo bar co lại */
+  .promo-bar {
+    flex-wrap: wrap;
+    gap: 15px;
     font-size: 12px;
-    padding: 15px;
   }
 }
