@@ -286,4 +286,7 @@ body {
   .hamburger {
     display: block; /* hiện trên mobile */
   }
+  .nav ul {
+    display: none; /* ẩn menu ngang */
+  }
 }
