@@ -5,7 +5,7 @@ body {
   font-family: 'Jost', sans-serif;
   background: #fff;
   color: #111;
-  max-width: 1920px;
+  max-width: 1920px; /* desktop khung */
   margin: 0 auto;
   opacity: 1;
 }
@@ -79,7 +79,7 @@ body {
   padding: 2px 6px;
 }
 
-/* Hamburger (ẩn trên desktop) */
+/* Hamburger (ẩn desktop) */
 .hamburger {
   display: none;
 }
@@ -91,19 +91,18 @@ body {
   border-radius: 2px;
 }
 
-/* Hero Section */
+/* Hero Section desktop */
 .hero {
   display: flex;
   justify-content: center;
   gap: 20px; /* giữ khoảng cách cũ */
   margin: 0 auto;
-  padding: 0;
   max-width: 1920px;
 }
 
 .hero-left, .hero-right {
-  flex: 0 0 695px; /* giữ width cũ */
-  height: 560px;   /* giữ height cũ */
+  flex: 0 0 695px;
+  height: 560px;
   position: relative;
 }
 
@@ -121,8 +120,7 @@ body {
   bottom: 30px;
   left: 20px;
   right: 20px;
-  color: #FFFFFF;
-  text-align: left;
+  color: #fff;
 }
 
 .hero-text h3 {
@@ -147,7 +145,7 @@ body {
   width: 160px;
   height: 45px;
   gap: 8px;
-  background: #FFFFFF;
+  background: #fff;
   color: #111;
   border-radius: 25px;
   padding: 8px;
@@ -190,7 +188,7 @@ body {
   text-align: center;
 }
 
-/* Responsive */
+/* Responsive mobile */
 @media (max-width: 430px) {
   body {
     max-width: 430px;
@@ -207,7 +205,7 @@ body {
   .logo {
     flex: 1;
     display: flex;
-    justify-content: center; /* logo ra giữa */
+    justify-content: center;
   }
 
   .nav ul {
@@ -215,13 +213,13 @@ body {
   }
 
   .hamburger {
-    display: block; /* hiện hamburger */
+    display: block;
   }
 
   .hero {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* giữ khoảng cách giữa ảnh */
+    gap: 20px; /* giữ khoảng cách */
     padding: 0 10px;
   }
 
@@ -243,7 +241,7 @@ body {
     bottom: 20px;
     left: 15px;
     right: 15px;
-    text-align: center; /* chữ nằm gọn trong ảnh */
+    text-align: center;
   }
 
   .hero-text h2 {
@@ -256,11 +254,11 @@ body {
     height: 40px;
     font-size: 12px;
     border-radius: 20px;
-    margin: 0 auto; /* nút nằm trong ảnh */
+    margin: 0 auto;
   }
 
   .promo-bar {
-    flex-direction: row; /* chữ + icon ngang */
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     padding: 10px;
