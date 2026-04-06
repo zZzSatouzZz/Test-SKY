@@ -190,6 +190,9 @@ body {
 
 /* Responsive mobile */
 @media (max-width: 430px) {
+  .nav ul {
+    display: none; /* ẩn menu ngang */
+  }
   body {
     max-width: 430px;
     margin: 0 auto;
