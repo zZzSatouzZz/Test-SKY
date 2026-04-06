@@ -79,7 +79,7 @@ body {
   padding: 2px 6px;
 }
 
-/* Hamburger (ẩn desktop) */
+/* Hamburger mặc định ẩn (PC) */
 .hamburger {
   display: none;
 }
@@ -186,18 +186,6 @@ body {
   background: #f4f4f4;
   padding: 20px;
   text-align: center;
-}
-
-/* Hamburger mặc định ẩn (PC) */
-.hamburger {
-  display: none;
-}
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: #111;
-  margin: 4px 0;
-  border-radius: 2px;
 }
 
 /* Responsive mobile */
