@@ -157,7 +157,7 @@ body {
   }
 }
 
-/* Promo Bar */
+/* Promo bar desktop */
 .promo-bar {
   display: flex;
   justify-content: center;
@@ -195,15 +195,13 @@ body {
   font-size: 14px;
 }
 
-/* Responsive */
+/* Mobile layout */
 @media (max-width: 430px) {
   body {
     max-width: 430px;
     margin: 0 auto;
-    height: auto;
   }
 
-  /* Header mobile */
   .header {
     max-width: 430px;
     padding: 0 15px;
@@ -262,13 +260,12 @@ body {
     object-fit: cover;
   }
 
-  /* Text overlay mobile */
   .hero-text {
     position: absolute;
     bottom: 20px;
     left: 15px;
     right: 15px;
-    text-align: center; /* chữ nằm gọn trong ảnh */
+    text-align: center;
   }
 
   .hero-text h2 {
@@ -281,21 +278,26 @@ body {
     height: 40px;
     font-size: 12px;
     border-radius: 20px;
-    margin: 0 auto; /* nút nằm trong ảnh và căn giữa */
+    margin: 0 auto;
   }
 
-  /* Promo bar mobile */
+  /* Promo bar mobile: vẫn hàng ngang */
   .promo-bar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px;
+    flex-direction: row;   /* giữ ngang */
+    flex-wrap: wrap;       /* cho phép xuống dòng nếu chật */
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
   }
 
   .promo-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
     gap: 8px;
+    white-space: nowrap;   /* chữ không xuống dòng */
   }
 
-  /* Footer mobile */
   .footer {
     font-size: 12px;
     padding: 15px;
