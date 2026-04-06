@@ -82,14 +82,18 @@ body {
 /* Hamburger mặc định ẩn (PC) */
 .hamburger {
   display: none;
+  cursor: pointer;
 }
+
 .hamburger span {
   display: block;
+  width: 25px;   /* thêm chiều rộng */
   height: 3px;
   background: #111;
-  margin: 4px 0;
+  margin: 5px 0;
   border-radius: 2px;
 }
+
 
 /* Hero Section desktop */
 .hero {
