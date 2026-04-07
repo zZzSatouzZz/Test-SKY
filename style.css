@@ -1,85 +1,111 @@
-/* Reset + Font */
+/* RESET */
 body {
   margin: 0;
-  padding: 0 30px;   /* padding ngang giống form */
   font-family: 'Jost', sans-serif;
   background: #fff;
-  color: #111;
-  max-width: 1440px; /* khung desktop Figma */
-  margin: 0 auto;    /* căn giữa */
-  opacity: 1;
 }
 
-/* Header */
-.header {
-  width: 100%;
-  max-width: 1800px;
+/* CONTAINER */
+.container {
+  max-width: 1400px;
   margin: 0 auto;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+.header {
   border-bottom: 1px solid #eee;
 }
 
-.logo img {
-  width: 92px;
-  height: 20px;
-  object-fit: contain;
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-/* Navigation */
+/* LOGO */
+.logo img {
+  width: 92px;
+}
+
+/* NAV */
 .nav ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav a {
-  display: inline-block;
-  height: 23px;
-  line-height: 23px;
-  padding: 0 12px;
-  color: #333;
   text-decoration: none;
+  color: #333;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .nav a.buy {
-  color: #000;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* Icons */
+/* ICONS */
 .icons {
   display: flex;
-  gap: 28px;
+  gap: 18px;
   align-items: center;
 }
 
-.icon {
-  font-size: 18px;
-  color: #111;
+.icons a {
   position: relative;
   text-decoration: none;
+  color: #111;
 }
 
+ /* IMAGE WRAP */
+.product-img {
+  position: relative;
+}
+
+/* BADGE CHUNG */
 .badge {
   position: absolute;
-  top: -8px;
-  right: -10px;
-  background-color: red;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  font-size: 11px;
   color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 6px;
+  border-radius: 4px;
 }
 
-/* Hamburger mặc định ẩn (PC) */
+/* SOLD OUT */
+.badge.soldout {
+  background: #757575;
+}
+
+/* SALE */
+.badge.sale {
+  background: #D73F0F;
+  top: 10px;
+}
+
+/* PREORDER */
+.badge.preorder {
+  background: #177983;
+  top: 35px;
+}
+
+/* RATING 4.5 */
+.rating {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+/* HAMBURGER */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -87,214 +113,287 @@ body {
 
 .hamburger span {
   display: block;
-  width: 25px;   /* thêm chiều rộng */
-  height: 3px;
+  width: 22px;
+  height: 2px;
   background: #111;
   margin: 5px 0;
-  border-radius: 2px;
 }
 
-
-/* Hero Section desktop */
+/* ================= HERO ================= */
 .hero {
   display: flex;
-  justify-content: center;
-  gap: 20px; /* giữ khoảng cách cũ */
-  margin: 0 auto;
-  max-width: 1920px;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.hero-left, .hero-right {
-  flex: 0 0 695px;
-  height: 560px;
+.hero-card {
+  flex: 1;
   position: relative;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.hero-left img,
-.hero-right img {
-  width: 695px;
-  height: 560px;
+.hero-card img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* Text overlay */
+/* overlay */
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+
+/* text */
 .hero-text {
   position: absolute;
   bottom: 30px;
-  left: 20px;
-  right: 20px;
+  left: 25px;
   color: #fff;
+  z-index: 2;
 }
 
 .hero-text h3 {
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 700;
   font-size: 12px;
-  text-transform: uppercase;
   margin: 0;
+  font-family: 'Instrument Sans', sans-serif;
 }
 
 .hero-text h2 {
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   margin: 5px 0 15px;
+  font-family: 'Instrument Sans', sans-serif;
 }
 
+/* button */
 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 45px;
-  gap: 8px;
+  padding: 12px 22px;
   background: #fff;
   color: #111;
-  border-radius: 25px;
-  padding: 8px;
-  text-decoration: none;
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 600;
+  border-radius: 999px;
   font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-/* Promo Bar */
+/* ================= PROMO ================= */
 .promo-bar {
+  margin-top: 30px;
+  background: #f4f4f4;
+  padding: 12px;
+
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 40px;
-  background: #f4f4f4;
-  padding: 10px 0;
 }
 
 .promo-item {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 13px;
   white-space: nowrap;
 }
 
 .promo-icon {
-  width: 14.882px;
-  height: 17.5px;
-  opacity: 1;
-  position: relative;
-  top: 1.25px;
-  left: 2.56px;
+  width: 16px;
 }
 
-/* Footer */
-.footer {
-  background: #f4f4f4;
-  padding: 20px;
+/* ================= SECTION ================= */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Instrument Sans', sans-serif;
+  margin-top: 50px;
+}
+
+.section-desc {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* ================= FEATURED ================= */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 250px 250px;
+  gap: 20px;
+
+  grid-template-areas:
+    "left top right"
+    "left bottom right";
+}
+
+.item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* grid area */
+.item-1 { grid-area: left; }
+.item-2 { grid-area: top; }
+.item-3 { grid-area: bottom; }
+.item-4 { grid-area: right; }
+
+/* button */
+.item button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ================= PRODUCT ================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
   text-align: center;
 }
 
+.product img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.product p {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.product span {
+  font-weight: bold;
+}
+.product-name {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.rating {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+/* ================= MOBILE ================= */
 @media (max-width: 431px) {
-  body {
-    max-width: 390px;
-    margin: 0 auto;
-    padding: 0 12px;
-  }
 
-  .header {
-    width: 100%;
-    padding: 0 12px;
+  /* HEADER */
+  .header-inner {
     height: 60px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-bottom: 1px solid #eee;
   }
 
-  /* Ẩn menu ngang */
   .nav ul {
     display: none;
   }
 
-  /* Hamburger bên trái */
   .hamburger {
     display: block;
     position: absolute;
     left: 12px;
   }
 
-  /* Logo ra giữa */
   .logo {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  .logo img {
-    width: 80px;
-    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  /* Icons bên phải */
+  .logo img {
+    width: 80px;
+  }
+
   .icons {
     position: absolute;
     right: 12px;
-    display: flex;
     gap: 12px;
-    font-size: 16px;
   }
-  /* Ẩn icon login, recent, wishlist */
-  .icons .login,
-  .icons .recent,
-  .icons .wishlist {
+
+  .icons a:nth-child(2),
+  .icons a:nth-child(3),
+  .icons a:nth-child(4) {
     display: none;
   }
 
-  /* Hero stack dọc */
+  /* HERO */
   .hero {
     flex-direction: column;
-    gap: 16px;
-    padding: 0;
-  }
-  .hero-left, .hero-right {
-    width: 100%;
-    position: relative;
-  }
-  .hero-left img,
-  .hero-right img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-  .hero-text {
-    position: absolute;
-    bottom: 16px;
-    left: 12px;
-    right: 12px;
-    text-align: center;
-    color: #fff;
-    z-index: 2; /* thêm để chắc chắn nằm trên ảnh */
-  }
-  .btn {
-    display: inline-block;
-    width: 130px;
-    height: 38px;
-    font-size: 12px;
-    border-radius: 18px;
-    margin: 0 auto;
-    background: #fff;
-    color: #111;
-    font-weight: 600;
-  }
-  /* Promo bar xuống dòng */
-  .promo-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    font-size: 12px;
-    padding: 10px;
+    padding: 0 12px;
   }
 
-  .footer {
-    font-size: 12px;
-    padding: 12px;
+  .hero-text h2 {
+    font-size: 22px;
   }
+
+  /* PROMO → scroll ngang */
+  .promo-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+  }
+
+  .promo-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .promo-item {
+    flex: 0 0 auto;
+  }
+
+  /* FEATURED → 2 cột */
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "left left"
+      "top bottom"
+      "right right";
+  }
+
+  /* PRODUCT → 2 cột */
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
