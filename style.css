@@ -48,14 +48,13 @@ button {
 /* NAV */
 .nav ul {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .nav li{
 display:inline-block;
-margin-right:35px;
 }
 
 .nav a {
@@ -580,16 +579,22 @@ margin-right:35px;
   display: none;
 }
 
-.mobile-nav {
-  display: none;
-}
-
-mobile-nav,
+.mobile-nav,
 .floating-buttons {
   display: none;
 }
+
 .nav ul {
+  display: flex;
+}
+
+.nav {
   display: block;
+}
+
+.plus,
+.minus {
+  display: none;
 }
 /* ================= MOBILE ================= */
 @media (max-width: 431px) {
@@ -598,11 +603,20 @@ mobile-nav,
   .header-inner {
     height: 60px;
   }
-
+  
   .nav ul {
     display: none;
   }
 
+  .nav.prev,
+  .nav.next {
+    display: block;
+  }
+
+   .plus,
+  .minus {
+    display: inline;
+  }
 
   .hamburger {
     display: block;
