@@ -48,10 +48,14 @@ button {
 /* NAV */
 .nav ul {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.nav li{
+display:inline-block;
+margin-right:35px;
 }
 
 .nav a {
@@ -245,7 +249,7 @@ button {
 .promo-icon {
   width: 16px;
   height: 16px;
-  padding: 50px;
+  padding: 45px;
 }
 
 /* ================= SECTION ================= */
@@ -581,11 +585,12 @@ button {
 }
 
 mobile-nav,
-.floating-buttons,
-.nav {
+.floating-buttons {
   display: none;
 }
-
+.nav ul {
+  display: block;
+}
 /* ================= MOBILE ================= */
 @media (max-width: 431px) {
 
