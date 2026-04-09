@@ -1,10 +1,10 @@
-/* RESET */
+/* RESET (Thiết lập lại mặc định) */
 body {
   margin: 0;
   font-family: 'Jost', sans-serif;
   background: #fff;
 }
-/* smooth global */
+/* Hiệu ứng mượt cho toàn bộ liên kết và nút */
 a, button {
   transition: 0.3s ease;
 }
